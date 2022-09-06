@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Matchers.anyLong;
+import static org.mockito.ArgumentMatchers.anyLong;
 
 /**
  * @author moises.macero
@@ -38,7 +38,7 @@ public class GameServiceImplTest {
     @Before
     public void setUp() {
         // With this call to initMocks we tell Mockito to process the annotations
-        MockitoAnnotations.initMocks(this);
+        MockitoAnnotations.openMocks(this);
         gameService = new GameServiceImpl(scoreCardRepository, badgeCardRepository, multiplicationClient);
 
         // Common given - attempt does not contain a lucky number by default

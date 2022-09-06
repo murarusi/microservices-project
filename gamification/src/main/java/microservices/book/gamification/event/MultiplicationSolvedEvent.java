@@ -21,4 +21,6 @@ class MultiplicationSolvedEvent implements Serializable {
     private final Long userId;
     private final boolean correct;
 
+    public MultiplicationSolvedEvent(){this(null,null,false);}
+
 }
